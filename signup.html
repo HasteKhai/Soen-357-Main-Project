@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="signupPage.css">
+<title>Sign Up</title>
+</head>
+<body>
+   
+    <form id="signup-form">
+        <h1>Sign Up</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Sign Up</button>
+        <p>If you have an account, <a href="login.html">log in</a>.</p>
+    </form>
+
+    <p id="signup-error-msg" style="color: red; display: none;">Username already exists. Please choose a different username.</p>
+
+    <script>
+        const signupForm = document.getElementById("signup-form");
+        const signupErrorMsg = document.getElementById("signup-error-msg");
+
+        signupForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const username = signupForm.username.value;
+            const password = signupForm.password.value;
+
+            // Check if username already exists in localStorage
+            const existingUser = localStorage.getItem(username);
+            if (existingUser) {
+                signupErrorMsg.style.display = "block";
+                return;
+            }
+
+            // Save username and password in localStorage
+            localStorage.setItem(username, password);
+            alert("Sign up successful! Please log in.");
+            window.location.href = "login.html"; // Navigate to login page
+        });
+    </script>
+</body>
+</html>
