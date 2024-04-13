@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Button</title>
+    <style>
+        /* CSS for the button */
+        .my-button {
+            padding: 20px 50px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 45%;
+            left: 17%;
+            transform: translateX(-50%);
+            z-index: 2; /* Ensure the button is above other elements */
+        }
+        body {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            height: 100vh; /* Set body height to full viewport height */
+            background-image: url('/Images/Back to School-1.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #login-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Lower z-index to place it behind the button */
+        }
+
+        #modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0; /* Lower z-index to place it behind the button and form */
+        }
+            
+                
+        #login-form-submit {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background-color: #007bff;
+            cursor: pointer;
+        }
+        .login-form-field {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+    </style>
+    <script defer src="login-page.js"></script>
+</head>
+<body>
+    <!-- HTML button element -->
+    <button class="my-button" id="toggle-form-button">Login</button>
+        <!-- Modal overlay -->
+        <div id="modal-overlay"></div>
+
+        <!-- Login form -->
+        <div id="login-form">
+            <form>
+                <input type="text" name="username" class="login-form-field" placeholder="Username">
+                <input type="password" name="password" class="login-form-field" placeholder="Password">
+                <input type="submit" value="Login" id="login-form-submit">
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            </form>
+        </div>
+    
+        <script>
+            // JavaScript to toggle the visibility of the modal overlay and form
+            var modalOverlay = document.getElementById('modal-overlay');
+            var loginForm = document.getElementById('login-form');
+            var toggleFormButton = document.getElementById('toggle-form-button');
+    
+            toggleFormButton.addEventListener('click', function() {
+                modalOverlay.style.display = 'block';
+                loginForm.style.display = 'block';
+            });
+    
+            modalOverlay.addEventListener('click', function() {
+                modalOverlay.style.display = 'none';
+                loginForm.style.display = 'none';
+            });
+
+            
+        </script>
+</body>
+</html>

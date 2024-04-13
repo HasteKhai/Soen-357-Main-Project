@@ -10,8 +10,9 @@ loginButton.addEventListener("click", (e) => {
     const storedPassword = localStorage.getItem(username);
     if (password === storedPassword) {
         alert("You have successfully logged in.");
-        window.location.href = "index.html"; // Navigate to another page
+        window.location.href = "homepage.html"; // Navigate to another page
     } else {
         loginErrorMsg.style.opacity = 1;
     }
 })
+
