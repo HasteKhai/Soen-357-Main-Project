@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('Images/signupbackground.png');
-    background-size: 1920px 1080px;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
