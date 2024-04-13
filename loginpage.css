@@ -11,22 +11,25 @@ html {
     display: grid;
     justify-items: center;
     align-items: center;
-    background-image: url('Images/signupbackground.png');
-    background-size: 1920px 1080px;
+    background-image: url('Images/Back\ to\ School 1.png');
+    background-size: cover;
     background-repeat: no-repeat;
   }
+  
  
   
   #main-holder {
     width: 25%;
-    height: 70%;
+    height: 35%;
     display: grid;
     justify-items: center;
     align-items: center;
     background: white;
     border-radius: 7px;
     margin-top: 10%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    margin-left: -50%;
+    margin-top: 20%;
   }
 
   
@@ -82,7 +85,11 @@ html {
     border-radius: 5px;
     color: white;
     font-weight: bold;
-    background-color: #007bff;
+    background-color: #6daa55;
     cursor: pointer;
     outline: none;
+    transition: background-color 0.3s ease;
+  }
+  #login-form-submit:hover {
+    background-color: #8dc73f; /* Change to your desired hover color */
   }
