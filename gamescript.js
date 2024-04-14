@@ -145,7 +145,7 @@ function drawStars() {
         for (let i = 0; i < num1; i++) {
             let newI = document.createElement("img");
             newI.classList.add("star");
-            newI.src = "../Images/star.png"
+            newI.src = "Images/star.png"
             newI.style.left = 30*count + "px";
             newI.style.top = Offset + "px";
 
@@ -157,7 +157,7 @@ function drawStars() {
         for (let i = 0; i < num2; i++){
             let newI = document.createElement("img");
             newI.classList.add("star");
-            newI.src = "../Images/star.png"
+            newI.src = "Images/star.png"
             newI.style.left = 30*count + "px";
             newI.style.top = 50 + Offset + "px";
     
@@ -175,7 +175,7 @@ function drawStars() {
         for (let i = 0; i < num1; i++) {
             let newI = document.createElement("img");
             newI.classList.add("star");
-            newI.src = "../Images/star.png"
+            newI.src = "Images/star.png"
             newI.style.left = 30*count + "px";
             newI.style.top = Offset + "px";
             container.appendChild(newI);
@@ -186,7 +186,7 @@ function drawStars() {
         for (let i = 0; i < num2; i++){
             let newI = document.createElement("img");
             newI.classList.add("star");
-            newI.src = "../Images/blackstar.png"
+            newI.src = "Images/blackstar.png"
             newI.style.left = 30*count + "px";
             newI.style.top = 50 + Offset + "px";
     
@@ -210,7 +210,7 @@ function drawStars() {
             for (let j = 0; j < num2; j++){
                 let newI = document.createElement("img");
                 newI.classList.add("star");
-                newI.src = "../Images/star.png"
+                newI.src = "Images/star.png"
                 newI.style.left = 30*count + "px";
                 newI.style.top = Offset + 50*i + "px";
                 container.appendChild(newI);
@@ -233,7 +233,7 @@ function drawStars() {
                 for (let j = 0; j < answer; j++){
                     let newI = document.createElement("img");
                     newI.classList.add("star");
-                    newI.src = "../Images/star.png"
+                    newI.src = "Images/star.png"
                     newI.style.left = 30*count + "px";
                     newI.style.top = Offset + "px";
                     container.appendChild(newI);
@@ -243,7 +243,7 @@ function drawStars() {
                 for (let j = 0; j < answer; j++){
                     let newI = document.createElement("img");
                     newI.classList.add("star");
-                    newI.src = "../Images/blackstar.png"
+                    newI.src = "Images/blackstar.png"
                     newI.style.left = 30*count + "px";
                     newI.style.top = Offset + 50*i + "px";
                     container.appendChild(newI);
