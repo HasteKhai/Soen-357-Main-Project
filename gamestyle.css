@@ -3,9 +3,21 @@ body {
     text-align: center;
 }
 
-.container {
-    max-width: 600px;
-    margin: 50px auto;
+.game {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.starbox {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#game-container {
+    margin: 0 auto;
+    height: auto;
 }
 
 button {
@@ -38,4 +50,5 @@ button.disabled {
 .star {
     max-width: 40px;
     max-height: 40px;
+    position: absolute;
 }

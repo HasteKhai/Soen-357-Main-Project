@@ -69,6 +69,7 @@ function loadQuestion() {
     questionElement.textContent = currentQ.question;
     optionsElement.innerHTML = "";
     starBox.textContent = '';
+    starBox.style.height = "10px";
 
     currentQ.options.forEach(option => {
         const button = document.createElement("button");
@@ -136,6 +137,7 @@ function drawStars() {
     //subtraction - one row of yellow stars, one row of black stars, then the third row of remaining yellow stars
     //Multiplication - x rows of y yellow stars
     //division - multiple rows
+    let Offset = container.getBoundingClientRect().top - 60;
 
     //Addition
     if(selectedOperator == '+'){
@@ -144,9 +146,10 @@ function drawStars() {
             let newI = document.createElement("img");
             newI.classList.add("star");
             newI.src = "../Images/star.png"
-            newI.style.left = 100*count + "px";
-    
-            container.appendChild(newP);
+            newI.style.left = 30*count + "px";
+            newI.style.top = Offset + "px";
+
+            container.appendChild(newI);
     
             count += 1;
         }
@@ -155,13 +158,15 @@ function drawStars() {
             let newI = document.createElement("img");
             newI.classList.add("star");
             newI.src = "../Images/star.png"
-            newI.style.left = 100*count + "px";
-            newI.style.top = "75px";
+            newI.style.left = 30*count + "px";
+            newI.style.top = 50 + Offset + "px";
     
             container.appendChild(newI);
     
             count += 1;
         }
+        console.log(Offset);
+        container.style.height = "110px";
     }
 
     //Subtraction
@@ -171,40 +176,49 @@ function drawStars() {
             let newI = document.createElement("img");
             newI.classList.add("star");
             newI.src = "../Images/star.png"
-            newI.style.left = 100*count + "px";
-    
+            newI.style.left = 30*count + "px";
+            newI.style.top = Offset + "px";
             container.appendChild(newI);
     
             count += 1;
         }
-        count = 0.5
+        count = 0;
         for (let i = 0; i < num2; i++){
             let newI = document.createElement("img");
             newI.classList.add("star");
             newI.src = "../Images/blackstar.png"
-            newI.style.left = 100*count + "px";
-            newI.style.top = "75px";
+            newI.style.left = 30*count + "px";
+            newI.style.top = 50 + Offset + "px";
     
             container.appendChild(newI);
     
             count += 1;
         }
+        console.log(Offset);
+        container.style.height = "110px";
     }
 
     //multiplication
     else if(selectedOperator == '*'){
+        if(num1 > num2){
+            let temp = num2;
+            num2 = num1;
+            num1 = temp;
+        }
         for (let i = 0; i < num1; i++){
             let count = 0 + i*0.5;
             for (let j = 0; j < num2; j++){
                 let newI = document.createElement("img");
                 newI.classList.add("star");
                 newI.src = "../Images/star.png"
-                newI.style.left = 100*count + "px";
-                newI.style.top = 75*i + "px";
+                newI.style.left = 30*count + "px";
+                newI.style.top = Offset + 50*i + "px";
                 container.appendChild(newI);
                 count += 1;
             }
         }
+        console.log(Offset);
+        container.style.height = num1*50 + 10 + "px";
     }
 
     //division
@@ -215,28 +229,30 @@ function drawStars() {
         //First row of stars are yellow
         for (let i = 0; i < num2; i++){
             let count = 0 + i*0.5;
-            if(i = 0){
-                for (let j = 0; j < num1; j++){
+            if(i == 0){
+                for (let j = 0; j < answer; j++){
                     let newI = document.createElement("img");
                     newI.classList.add("star");
                     newI.src = "../Images/star.png"
-                    newI.style.left = 100*count + "px";
-                    newI.style.top = 75*i + "px";
+                    newI.style.left = 30*count + "px";
+                    newI.style.top = Offset + "px";
                     container.appendChild(newI);
                     count += 1;
                 }
             } else {
-                for (let j = 0; j < num1; j++){
+                for (let j = 0; j < answer; j++){
                     let newI = document.createElement("img");
                     newI.classList.add("star");
                     newI.src = "../Images/blackstar.png"
-                    newI.style.left = 100*count + "px";
-                    newI.style.top = 75*i + "px";
+                    newI.style.left = 30*count + "px";
+                    newI.style.top = Offset + 50*i + "px";
                     container.appendChild(newI);
                     count += 1;
                 }
             }
+            console.log(Offset);
         }
+        container.style.height = num2*50 + 10 + "px";
     }
 }
 // Load the first question when the page loads
