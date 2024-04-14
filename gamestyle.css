@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.game {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.starbox {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#game-container {
+    margin: 0 auto;
+    height: auto;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+button:hover:not([disabled]) {
+    background-color: #add8e6; /* Light blue color for hover */
+    cursor: pointer;
+}
+
+#options button {
+    margin: 10px;
+}
+
+button.correct {
+    background-color: #a8e6cf; /* light green */
+}
+
+button.wrong {
+    background-color: #f4acb7; /* light red */
+}
+
+button.disabled {
+    opacity: 0.6; /* Reduced opacity for disabled options */
+    cursor: default;
+}
+
+.star {
+    max-width: 40px;
+    max-height: 40px;
+    position: absolute;
+}
