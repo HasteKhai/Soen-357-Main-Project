@@ -13,3 +13,7 @@ function stats() {
 	// Perform logout action here, such as redirecting to a logout page or triggering a logout API request
 	window.location.href = "statistic.html"; // Example redirect to a logout PHP script
 }
+function home() {
+	// Perform logout action here, such as redirecting to a logout page or triggering a logout API request
+	window.location.href = "homepage.html"; // Example redirect to a logout PHP script
+}

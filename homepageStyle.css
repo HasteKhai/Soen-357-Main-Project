@@ -193,10 +193,10 @@ header {
     align-items: flex-end;
     background-image: cover;
     padding-left:100px;
-    background-position: center 10%; /* Adjust the vertical position */
+    background-position: center 10%; 
 }
 
 .Statistics {
-    width: 100%; /* Adjust image width */
-    height: 100%; /* Maintain aspect ratio */
+    width: 100%; 
+    height: 100%; 
 }
