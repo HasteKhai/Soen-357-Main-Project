@@ -7,5 +7,9 @@ menuicn.addEventListener("click", () => {
 
 function logout() {
 	// Perform logout action here, such as redirecting to a logout page or triggering a logout API request
-	window.location.href = "login.html"; // Example redirect to a logout PHP script
+	window.location.href = "index.html"; // Example redirect to a logout PHP script
+}
+function stats() {
+	// Perform logout action here, such as redirecting to a logout page or triggering a logout API request
+	window.location.href = "statistic.html"; // Example redirect to a logout PHP script
 }

@@ -173,9 +173,11 @@ header {
 
 .box {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 40%;
     transform: translate(-50%, -50%);
+    z-index: -1; /* Move the .box behind other elements */
+    width: 50%; /* Set the width to match the .nav element */
 }
 
 .game-img {
@@ -197,6 +199,6 @@ header {
 }
 
 .Statistics {
-    width: 100%; /* Adjust image width */
+    width: 150%; /* Adjust image width */
     height: 100%; /* Maintain aspect ratio */
 }
