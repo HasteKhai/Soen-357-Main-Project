@@ -32,7 +32,6 @@
             </div>
 
             <div class="logout_top">
-                <img src="Images/logout_icon.png" class="icn" alt="Logout">
                 <div class="dp">
                     <img src="Images/profile_icon.jpg" class="dpicn" alt="Profile Picture">
                 </div>
@@ -88,10 +87,10 @@
                     <div id="options">
                         <!-- Options will be populated here -->
                     </div>
-                    
-                    <button onclick="restartGame()">Restart</button>
-                    <button id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
-            
+                    <div class="button-container">
+                    <button class="button-ui" onclick="restartGame()">Restart</button>
+                    <button class="button-ui" id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
+                     </div>
                     <p>Correct Answers: <span id="score">0</span></p>
                 </div>
             
@@ -101,4 +100,6 @@
         <script src="./index.js"></script>
     </body>
 </html>
+
+
 
