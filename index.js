@@ -18,5 +18,5 @@ function home() {
 }
 function settings() {
 	
-	window.location.href = "settings.html"; 
+	window.location.href = "Settings.html"; 
 }
