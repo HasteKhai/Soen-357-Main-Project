@@ -9,15 +9,14 @@
 }
 
 :root {
-    --background-color1: #fafaff;
-    --background-color2: #C1E1C1;
-    --background-color3: #ededed;
-    --background-color4: #90EE90;
-    --primary-color: #4b49ac;
-    --secondary-color: #0c007d;
-    --Border-color: #3f0097;
+    --background-color1: #f7e6d4; 
+    --background-color2: #a2d2ca; 
+    --background-color3: #ffcc80; 
+    --background-color4: #b8d8b8; 
+    --primary-color: #4386f4; 
+    --secondary-color: #ff5c8a; 
+    --border-color: #bfbfbf; 
 }
-
 body {
     background-color: var(--background-color4);
     max-width: 100%;
@@ -159,14 +158,14 @@ header {
     gap: 30px;
 }
 
-.option1 {
+.option3 {
     border-left: 5px solid #010058af;
     background-color: var(--Border-color);
     color: white;
     cursor: pointer;
 }
 
-.option1:hover {
+.option3:hover {
     border-left: 5px solid #010058af;
     background-color: var(--Border-color);
 }
@@ -174,7 +173,7 @@ header {
 .box {
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1; /* Move the .box behind other elements */
     width: 50%; /* Set the width to match the .nav element */
@@ -189,7 +188,7 @@ header {
     font-size: 30px;
     letter-spacing: 3px;
 }
-.statictics-container {
+.settings-container {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -199,6 +198,6 @@ header {
 }
 
 .Statistics {
-    width: 150%; /* Adjust image width */
+    width: 120%; /* Adjust image width */
     height: 100%; /* Maintain aspect ratio */
 }
