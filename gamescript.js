@@ -165,7 +165,6 @@ function drawStars() {
     
             count += 1;
         }
-        console.log(Offset);
         container.style.height = "110px";
     }
 
@@ -194,8 +193,24 @@ function drawStars() {
     
             count += 1;
         }
-        console.log(Offset);
-        container.style.height = "110px";
+        count = 0;
+        let hr = document.createElement("hr");
+        hr.style.top = "215px";
+        hr.style.width = "500px";
+        hr.style.position = "absolute";
+        container.appendChild(hr);
+        for (let i = 0; i < answer; i++){
+            let newI = document.createElement("img");
+            newI.classList.add("star");
+            newI.src = "Images/star.png"
+            newI.style.left = 30*num2 + 30*count + "px";
+            newI.style.top = 110 + Offset + "px";
+    
+            container.appendChild(newI);
+    
+            count += 1;
+        }
+        container.style.height = "160px";
     }
 
     //multiplication
@@ -217,7 +232,6 @@ function drawStars() {
                 count += 1;
             }
         }
-        console.log(Offset);
         container.style.height = num1*50 + 10 + "px";
     }
 
@@ -250,7 +264,6 @@ function drawStars() {
                     count += 1;
                 }
             }
-            console.log(Offset);
         }
         container.style.height = num2*50 + 10 + "px";
     }
