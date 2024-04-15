@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Architects Daughter');
 body {
-    font-family: "Architects Daughter";
+    height: 100%;
     margin: 0;
-    padding: 0;
-    background-image: url('Images/signupbackground.png');
+    font-family: "Architects Daughter";
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-image: url('Images/Back\ to\ School 1.png');
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+  }
 
 form {
     width: 300px;
@@ -24,6 +23,16 @@ label {
     display: block;
     margin-bottom: 5px;
 }
+#main-holder {
+    width: 25%;
+    height: 35%;
+    display: grid;
+    border-radius: 7px;
+    margin-top: 10%;
+    margin-left: -55%;
+    margin-top: 20%;
+  }
+
 
 input[type="text"],
 input[type="password"],
@@ -37,14 +46,14 @@ button {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #6daa55;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #8dc73f;
 }
 
 #signup-error-msg {
