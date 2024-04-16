@@ -248,9 +248,10 @@ filter: grayscale(0);
 }
 .button-container {
     display: flex;
+    padding-bottom: 10%;
   }
   
-.button-ui {
+  .button-ui {
     display: flex;
     align-items: center;
     font-family: inherit;
@@ -258,25 +259,23 @@ filter: grayscale(0);
     font-size: 16px;
     margin-right: 10px;
     padding: 0.7em 1.4em 0.7em 1.1em;
-    color: white;
-    background: #ad5389;
-    background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+    color: rgb(0, 0, 0);
+    background: linear-gradient(0deg, #f9ca24 0%, #e7b31e 100%); /* Gradient with yellow pastel and a slightly darker shade */
     border: none;
-    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    box-shadow: 0 0.7em 1.5em -0.5em #f9ca24;
     letter-spacing: 0.05em;
     border-radius: 20em;
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-  }
-  
+}
   .button-ui:hover {
-    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+    box-shadow: 0 0.5em 1.5em -0.5em #fffffe;
   }
   
   .button-ui:active {
-    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+    box-shadow: 0 0.3em 1em -0.5em #f9ca24;
   }
 
  

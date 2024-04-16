@@ -9,23 +9,23 @@ function generateQuestion() {
     
     switch (selectedOperator) {
         case '+':
-            num1 = Math.floor(Math.random() * 20) + 1;
-            num2 = Math.floor(Math.random() * 20) + 1;
+            num1 = Math.floor(Math.random() * 10) + 1;
+            num2 = Math.floor(Math.random() * 10) + 1;
             answer = num1 + num2;
             break;
         case '-':
-            num1 = Math.floor(Math.random() * 20) + 1;
+            num1 = Math.floor(Math.random() * 10) + 1;
             num2 = Math.floor(Math.random() * num1) + 1;
             answer = num1 - num2;
             break;
         case '*':
             num1 = Math.floor(Math.random() * 10) + 1;
-            num2 = Math.floor(Math.random() * 10) + 1;
+            num2 = Math.floor(Math.random() * num1%5) + 1;
             answer = num1 * num2;
             break;
         case '/':
             num2 = Math.floor(Math.random() * 10) + 1;
-            num1 = num2 * (Math.floor(Math.random() * 10) + 1);
+            num1 = num2 * (Math.floor(Math.random() * num2%5) + 1);
             answer = num1 / num2;
             break;
     }
