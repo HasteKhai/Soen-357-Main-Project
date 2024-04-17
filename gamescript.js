@@ -193,12 +193,15 @@ function drawStars() {
     
             count += 1;
         }
+
         count = 0;
         let hr = document.createElement("hr");
-        hr.style.top = "215px";
-        hr.style.width = "500px";
+        hr.style.top = "315px";
+        let hrwidth = 35*num1;
+        hr.style.width = 10 + hrwidth + "px";
         hr.style.position = "absolute";
         container.appendChild(hr);
+
         for (let i = 0; i < answer; i++){
             let newI = document.createElement("img");
             newI.classList.add("star");
