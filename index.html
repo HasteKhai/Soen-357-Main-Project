@@ -5,23 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learniverse</title>
-  <link rel="stylesheet" href="loginpage.css">
+  <link rel="stylesheet" href="loginpage.css"> 
   <script defer src="login-page.js"></script>
 </head>
 
 <body>
-  <div id="login-error-msg-holder">
+  <div id="error-holder">
   
-    <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    <p id="error">Invalid username <span id="error-display-line">and/or password</span></p>
   </div>
   
+   <!-- Login form container -->
   <main id="main-holder">
   
    
     <form id="login-form">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-      <input type="submit" value="Login" id="login-form-submit">
+      <input type="text" name="username"  class="login-form" placeholder="Username">
+      <input type="password" name="password" class="login-form" placeholder="Password">
+      <input type="submit" value="Login" id="submit">
       <p>Don't have an account? <a href="signup.html">Sign up</a></p>
     </form>
      

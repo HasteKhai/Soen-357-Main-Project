@@ -175,8 +175,8 @@ header {
     top: 50%;
     left: 40%;
     transform: translate(-50%, -50%);
-    z-index: -1; /* Move the .box behind other elements */
-    width: 50%; /* Set the width to match the .nav element */
+    z-index: -1; 
+    width: 50%; 
 }
 
 .game-img {
@@ -194,10 +194,10 @@ header {
     align-items: flex-end;
     background-image: cover;
     padding-left:100px;
-    background-position: center 10%; /* Adjust the vertical position */
+    background-position: center 10%; 
 }
 
 .Statistics {
-    width: 150%; /* Adjust image width */
-    height: 100%; /* Maintain aspect ratio */
+    width: 150%; 
+    height: 100%; 
 }

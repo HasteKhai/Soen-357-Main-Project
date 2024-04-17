@@ -11,13 +11,13 @@
     <main id="main-holder">
     <form id="signup-form">
         <h1>Sign Up</h1>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
+        <label for="new-username">Username:</label>
+        <input type="text" id="new-username" name="new-username" required><br>
+        <label for="new-password">Password:</label>
+        <input type="password" id="new-password" name="new-password" required><br>
         <button type="submit">Sign Up</button>
         <p>If you have an account, <a href="index.html">log in</a>.</p>
-        <p id="signup-error-msg" style="color: red; display: none;">Username already exists. Please choose a different username.</p>
+        <p id="signup-error-msg" style="color: red; display: none;">Username already exists.</p>
     </form>
     </main>
     
@@ -28,8 +28,8 @@
 
         signupForm.addEventListener("submit", (e) => {
             e.preventDefault();
-            const username = signupForm.username.value;
-            const password = signupForm.password.value;
+            const username = signupForm["new-username"].value;
+            const password = signupForm["new-password"].value;
 
             // Check if username already exists in localStorage
             const existingUser = localStorage.getItem(username);
@@ -41,7 +41,7 @@
             // Save username and password in localStorage
             localStorage.setItem(username, password);
             alert("Sign up successful! Please log in.");
-            window.location.href = "index.html"; // Navigate to login page
+            window.location.href = "index.html";
         });
     </script>
 </body>

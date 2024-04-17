@@ -1,105 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible"
-            content="IE=edge">
-        <meta name="viewport"
-            content="width=device-width, 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, 
 				initial-scale=1.0">
-        <title>Math Game</title>
-        <link rel="stylesheet"
-            href="homepageStyle.css">
-        <link rel="stylesheet"
-            href="responsive.css">
-        <link rel="stylesheet"
-            href="gamestyle.css">
+    <title>Math Game</title>
+    <link rel="stylesheet"
+        href="homepageStyle.css">
+    <link rel="stylesheet"
+        href="responsive.css">
+    <link rel="stylesheet"
+        href="gamestyle.css">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <header>
+    <header>
 
-            <div class="logosection">
-                <div class="logo">Learniverse</div>
-                <img
-                    src="Images/dash_bars.png"
-                    class="icn menuicn"
-                    id="menuicn"
-                    alt="menu-icon">
+        <!-- Logo Section -->
+        <div class="logosection">
+            <div class="logo">Learniverse</div>
+            <img
+                src="Images/dash_bars.png"
+                class="icn menuicn"
+                id="menuicn"
+                alt="menu-icon">
+        </div>
+
+        <!-- Logout Section -->
+        <div class="logout_top">
+            <div class="dp">
+                <img src="Images/profile_icon.jpg" class="dpicn" alt="Profile Picture">
             </div>
+        </div>
 
-            <div class="logout_top">
-                <div class="dp">
-                    <img src="Images/profile_icon.jpg" class="dpicn" alt="Profile Picture">
-                </div>
-            </div>
-            
 
-        </header>
+    </header>
 
-        <div class="main-container">
-            <div class="navcontainer">
-                <nav class="nav">
-                    <div class="nav-upper-options">
-                        <div class="nav-option option1">
-                            <img
+    <div class="main-container">
+        <div class="navcontainer">
+            <nav class="nav">
+                <!-- Navigation Options -->
+                <div class="nav-upper-options">
+                    <div class="nav-option option1">
+                        <img
                             src="/Images/games_icon.png"
                             class="nav-img"
                             alt="dashboard">
                         <h3> Games</h3>
-                        </div>
-                    
-                        <div class="option2 nav-option" onclick="stats()">
-                            <img src="Images/statistics_icon.png"
-                                class="nav-img"
-                                alt="Statistics">
-                            <h3> Statistics</h3>
-                        </div>
-                  
-                        <div class="nav-option option"  onclick="settings()">
-                            <img
-                                src="Images/settings_icon.png"
-                                class="nav-img"
-                                alt="settings">
-                            <h3> Settings</h3>
-                        </div>
-
-                        <div class="nav-option logout"  onclick="logout()">
-                            <img
-                                src="Images/logout_icon.png"
-                                class="nav-img"
-                                alt="logout">
-                            <h3>Logout</h3>
-                        </div>
-
-                        <div class="box-container"> 
                     </div>
-                </nav>
-            </div>
-            <div id="game-container"> 
-                <div class="game">
-                    <h1>Math Game</h1>
-                    <p id="question" style="white-space: pre-wrap"></p>
-                    <div id="starbox"></div>
-                    <div id="options">
-                        <!-- Options will be populated here -->
+
+                    <div class="option2 nav-option" onclick="stats()">
+                        <img src="Images/statistics_icon.png"
+                            class="nav-img"
+                            alt="Statistics">
+                        <h3> Statistics</h3>
                     </div>
-                    <div class="button-container">
+
+                    <div class="nav-option option"  onclick="settings()">
+                        <img
+                            src="Images/settings_icon.png"
+                            class="nav-img"
+                            alt="settings">
+                        <h3> Settings</h3>
+                    </div>
+
+                    <div class="nav-option logout"  onclick="logout()">
+                        <img
+                            src="Images/logout_icon.png"
+                            class="nav-img"
+                            alt="logout">
+                        <h3>Logout</h3>
+                    </div>
+
+                    <div class="box-container"> 
+                </div>
+            </nav>
+        </div>
+        <!-- Game Container -->
+        <div id="game-container"> 
+            <div class="game">
+                <h1>Math Game</h1>
+                <p id="question" style="white-space: pre-wrap"></p>
+                <div id="starbox"></div>
+                <div id="options">
+                    <!-- Options will be populated here -->
+                </div>
+                <div class="button-container">
                     <button class="button-ui" onclick="restartGame()">Restart</button>
                     <button class="button-ui" id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
-                     </div>
-                    <p>Correct Answers: <span id="score">0</span></p>
                 </div>
-            
-                <script src="gamescript.js"></script>
+                <p>Correct Answers: <span id="score">0</span></p>
+            </div>
+
+            <script src="gamescript.js"></script>
         </div>
 
         <script src="./index.js"></script>
-    </body>
+</body>
+
 </html>
-
-
-

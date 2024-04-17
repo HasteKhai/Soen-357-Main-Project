@@ -2,11 +2,11 @@ let currentQuestion = 1;
 let score = 0;
 let num1, num2, answer;
 let selectedOperator;
-
+// Function to generate a math question
 function generateQuestion() {
     const operators = ['+', '-', '*', '/'];
     selectedOperator = operators[Math.floor(Math.random() * operators.length)];
-    
+     // Generate numbers and answer based on the selected operator
     switch (selectedOperator) {
         case '+':
             num1 = Math.floor(Math.random() * 10) + 1;
@@ -29,7 +29,7 @@ function generateQuestion() {
             answer = num1 / num2;
             break;
     }
-
+  // Return the question, options, and answer
     return {
         question: `Question ${currentQuestion}
 What is ${num1} ${selectedOperator} ${num2}?`,
@@ -37,10 +37,10 @@ What is ${num1} ${selectedOperator} ${num2}?`,
         answer: answer.toString()
     };
 }
-
+// Function to generate options for the question
 function generateOptions(answer) {
     const options = [answer.toString()];
-    
+    // Keep adding random options until there are 4 options
     while (options.length < 4) {
         const randomOption = Math.floor(Math.random() * 40) + 1;
 
@@ -48,10 +48,10 @@ function generateOptions(answer) {
             options.push(randomOption.toString());
         }
     }
-
+    // Shuffle the options
     return shuffle(options);
 }
-
+// Function to shuffle an array
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -59,7 +59,7 @@ function shuffle(array) {
     }
     return array;
 }
-
+// Function to load a new question
 function loadQuestion() {
     const questionElement = document.getElementById("question");
     const optionsElement = document.getElementById("options");
@@ -70,7 +70,7 @@ function loadQuestion() {
     optionsElement.innerHTML = "";
     starBox.textContent = '';
     starBox.style.height = "10px";
-
+    // Display the question and options
     currentQ.options.forEach(option => {
         const button = document.createElement("button");
         button.textContent = option;
@@ -80,7 +80,7 @@ function loadQuestion() {
         optionsElement.appendChild(button);
     });
 }
-
+// Function to check the answer selected by the user
 function checkAnswer(selectedOption, correctAnswer) {
     const options = document.getElementById("options").querySelectorAll("button");
     options.forEach(option => {
@@ -100,7 +100,7 @@ function checkAnswer(selectedOption, correctAnswer) {
     document.getElementById("nextBtn").disabled = false;
 
 }
-
+// Function to load the next question
 function nextQuestion() {
     const options = document.getElementById("options").querySelectorAll("button");
     options.forEach(option => {
@@ -109,7 +109,7 @@ function nextQuestion() {
     });
 
     currentQuestion++;
-
+     // If there are more questions, load the next one; otherwise, end the game
     if (currentQuestion <= 10) {
         document.getElementById("nextBtn").disabled = true;
         loadQuestion();
@@ -121,7 +121,7 @@ function nextQuestion() {
         loadQuestion();
     }
 }
-
+// Function to restart the game
 function restartGame() {
     currentQuestion = 1;
     score = 0;
